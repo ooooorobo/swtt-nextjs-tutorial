@@ -3,9 +3,6 @@
 이환용 교수님의 오픈소스SW입문 과목의 기말 최종 과제 레포지토리입니다. 
 **Next.js 소개 및 SSR 구현과 SEO 구성 실습**을 주제로 Open Source Software 도구를 교육하는 동영상 콘텐츠를 제작했습니다.
 
-- 동영상 링크: 
-- 발표 자료 링크: 
-
 # [Next.js](https://nextjs.org/)
 
 > The React Framework for Production
