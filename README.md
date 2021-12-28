@@ -130,7 +130,8 @@ module.exports = {
 
 Image Optimization API는 Image 컴포넌트로 불러오는 이미지를 최적화한 후에 Next.js 웹 서버에서 직접 이미지를 제공하는 방식으로 작동한다. 아래 스크린샷을 보면 AWS S3에 저장되어 있는 이미지를 `next/image`를 사용해 요청했더니 next 웹 서버로 요청이 보내진 것을 확인할 수 있다. 또한 CDN을 따로 사용하지 않아도 이미지를 캐싱할 수 있게 되었다.
 
--- 여기에 이미지 삽입
+![이미지를 가져오기 위해 next 웹 서버로 이미지를 요청하고 있음](https://user-images.githubusercontent.com/40057032/147535510-10688481-6b6f-4075-91d8-4a350274bc3b.png)
+![S3에서 별도 캐시 설정을 하고 있지 않지만 Next.js 웹 서버에서 이미지를 캐싱하고 있음](https://user-images.githubusercontent.com/40057032/147535517-114877a6-7a67-4d69-b4a6-2382cb39d33c.png)
 
 이미지 요소에 너비, 높이 값을 주지 않으면 이미지가 로드되기 전까지 그 공간을 할당해 주지 않는다. 이미지가 로드되면 이미지의 크기만큼 이미지 요소가 자리를 차지하며 다른 요소를 밀어내게 되는데, 즉 레이아웃 시프트가 일어나 레이아웃의 변경이 일어날 수 있다. 따라서 이미지 요소에는 width, height 속성을 명시적으로 주어야 한다. 그러나 로드될 이미지의 크기를 알 수 없는 경우가 대부분이다. `next/image`에서는 layout 속성을 제공해서 부모 요소에 따라 이미지 크기가 조정되도록 있도록 한다. [Optional Props의 layout 참고](https://nextjs.org/docs/api-reference/next/image)
 
